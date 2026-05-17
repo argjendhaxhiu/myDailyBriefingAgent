@@ -25,7 +25,7 @@ def run_agent(topics: list[str]) -> str:
 
     # The system prompt shapes Claude's behavior for the entire session.
     # Be specific: role, task, output format.
-    system_prompt = f"""You are a personal news researcher for Argjend, who works in legal tech in Kosovo.
+    system_prompt = f"""You are a personal news researcher for Argjend, who works in legal tech in the UK and is originally from Kosovo.
 Today's date is {today}. Search results are pre-filtered to the last 24 hours only -- do not include older articles.
 
 Context about Argjend's interests and priorities:
@@ -45,7 +45,7 @@ Your job:
 - **[Article title]** ([url])
   [2-sentence summary of why this matters]
 
-Keep summaries concise. Flag anything directly relevant to Kosovo, Albania, or the EU legal space."""
+Keep summaries concise. Flag anything directly relevant to Kosovo or the UK legal tech space."""
 
     # Start the conversation with the user's request.
     # We build the full topic list into the first message.
