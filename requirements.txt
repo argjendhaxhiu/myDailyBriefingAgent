@@ -2,3 +2,4 @@ anthropic
 tavily-python
 python-dotenv
 resend
+langfuse>=2,<4

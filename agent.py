@@ -15,9 +15,13 @@ import os
 import json
 from datetime import date
 import anthropic
+from langfuse import Langfuse, observe
 from tools import TOOLS, run_tool
 
+langfuse = Langfuse()
 
+
+@observe()  # this decorator tells Langfuse to trace this function
 def run_agent(topics: list[str]) -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 

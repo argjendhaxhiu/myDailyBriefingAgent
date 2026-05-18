@@ -30,4 +30,7 @@ jobs:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+          LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+          LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+          LANGFUSE_HOST: ${{ secrets.LANGFUSE_HOST }}
         run: python main.py
