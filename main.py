@@ -3,10 +3,10 @@ Entry point. Run this with: python main.py
 """
 
 from dotenv import load_dotenv
+load_dotenv()  # must run before any other import that reads env vars
+
 from agent import run_agent
 from email_sender import send_briefing
-
-load_dotenv()
 
 # Your personal topics. Edit these freely.
 TOPICS = [
